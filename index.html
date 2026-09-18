@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="DUSTHAKAR RAMOJI RAO — Biomedical Sciences & Engineering portfolio">
+<title>DR — Biomedical Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050b15;--panel:#0a1422;--text:#edf8ff;--muted:#91a7bd;--cyan:#59e1ff;--violet:#a38bff;--line:rgba(255,255,255,.09);--max:1160px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+a{text-decoration:none;color:inherit}.container{width:min(92%,var(--max));margin:auto}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:50px 50px;mask-image:linear-gradient(to bottom,black,transparent 80%);z-index:-2}
+#orb{position:fixed;width:280px;height:280px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(89,225,255,.13),transparent 68%);transform:translate(-50%,-50%);z-index:-1;transition:transform .08s linear}
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(92%,1080px);z-index:20;border:1px solid var(--line);background:rgba(5,11,21,.68);backdrop-filter:blur(18px);border-radius:18px}
+.nav{height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 18px}.logo{font:700 1.1rem "Space Grotesk";letter-spacing:.08em}.logo b{color:var(--cyan)}
+.links{display:flex;gap:23px;color:var(--muted);font-size:.82rem}.links a{transition:.2s}.links a:hover,.links a.active{color:var(--cyan)}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;position:relative}
+.hero-content{position:relative;z-index:2}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid rgba(89,225,255,.24);background:rgba(89,225,255,.05);border-radius:999px;color:#bdefff;font-size:.78rem;font-weight:700;opacity:0;animation:rise .8s .1s forwards}.pulse{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 0 rgba(89,225,255,.6);animation:pulse 2s infinite}
+h1{font:700 clamp(3.5rem,9vw,8rem)/.88 "Space Grotesk";letter-spacing:-.065em;margin:24px 0;max-width:900px;opacity:0;animation:rise .9s .2s forwards}.gradient{background:linear-gradient(100deg,var(--cyan),#d1c7ff 65%,var(--violet));-webkit-background-clip:text;color:transparent}
+.hero-copy{max-width:710px;color:var(--muted);font-size:1.05rem;opacity:0;animation:rise .9s .35s forwards}.buttons{display:flex;gap:12px;margin-top:30px;opacity:0;animation:rise .9s .5s forwards}.btn{padding:13px 18px;border:1px solid var(--line);border-radius:12px;font-size:.87rem;font-weight:700;transition:.25s;position:relative;overflow:hidden}.btn:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.16),transparent);transform:translateX(-120%);transition:.6s}.btn:hover:after{transform:translateX(120%)}.primary{background:var(--text);color:var(--bg)}.btn:hover{transform:translateY(-3px);border-color:rgba(89,225,255,.5)}
+.bio-orbit{position:absolute;right:3%;width:min(38vw,430px);height:min(38vw,430px);border:1px solid rgba(89,225,255,.14);border-radius:50%;animation:spin 22s linear infinite}.bio-orbit:before,.bio-orbit:after{content:"";position:absolute;border:1px solid rgba(163,139,255,.17);border-radius:50%;inset:12%;transform:rotate(60deg)}.bio-orbit:after{inset:24%;transform:rotate(-45deg)}.core{position:absolute;inset:38%;border-radius:50%;background:radial-gradient(circle,var(--cyan),rgba(89,225,255,.05) 60%,transparent);box-shadow:0 0 80px rgba(89,225,255,.18);animation:breathe 3s ease-in-out infinite}.node{position:absolute;width:9px;height:9px;background:var(--cyan);border-radius:50%;box-shadow:0 0 18px var(--cyan)}.n1{top:7%;left:50%}.n2{right:8%;top:50%}.n3{bottom:9%;left:20%}
+section{padding:105px 0;border-top:1px solid var(--line)}.kicker{color:var(--cyan);font-size:.7rem;letter-spacing:.2em;font-weight:800;text-transform:uppercase;margin-bottom:10px}h2{font:600 clamp(2rem,4vw,3.3rem)/1 "Space Grotesk";letter-spacing:-.045em;margin-bottom:15px}.lead{color:var(--muted);max-width:700px;margin-bottom:35px}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}.card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border-radius:22px;padding:28px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;width:180px;height:180px;right:-100px;top:-100px;background:radial-gradient(circle,rgba(89,225,255,.1),transparent 70%)}.card p{color:var(--muted)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat{padding:22px;border:1px solid var(--line);border-radius:17px;background:var(--panel);transition:.25s}.stat:hover{transform:translateY(-5px);border-color:rgba(89,225,255,.35)}.stat strong{font:600 1.45rem "Space Grotesk";display:block}.stat span{font-size:.78rem;color:var(--muted)}
+.research-card{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.molecule{min-height:300px;position:relative;display:grid;place-items:center}.molecule svg{width:100%;max-width:440px;overflow:visible}.strand{fill:none;stroke:rgba(89,225,255,.38);stroke-width:2}.m-dot{fill:var(--cyan);filter:drop-shadow(0 0 8px rgba(89,225,255,.8));animation:float 3s ease-in-out infinite}.m-dot:nth-child(2n){animation-delay:.6s}
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.tag{padding:8px 11px;border-radius:999px;border:1px solid var(--line);font-size:.76rem;color:#c8d8e8;background:rgba(255,255,255,.025)}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.project{min-height:280px;display:flex;flex-direction:column;justify-content:space-between;transition:.35s;transform-style:preserve-3d}.project:hover{transform:translateY(-9px) rotateX(2deg);border-color:rgba(89,225,255,.35);box-shadow:0 20px 60px rgba(0,0,0,.25)}.project small{color:var(--cyan);font-weight:800;letter-spacing:.12em;text-transform:uppercase}.project h3{font:600 1.35rem "Space Grotesk";margin:14px 0 9px}.project p{font-size:.88rem}.arrow{font-size:1.5rem;color:var(--cyan)}
+.timeline{display:grid;gap:10px}.exp{display:grid;grid-template-columns:170px 1fr;gap:25px;padding:25px 0;border-bottom:1px solid var(--line)}.date{color:var(--cyan);font-size:.75rem;font-weight:800}.exp h3{font:600 1.25rem "Space Grotesk";margin-bottom:6px}.exp p{color:var(--muted);font-size:.9rem}
+.skillwrap{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:11px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.025);color:#c9d8e7;font-size:.82rem;transition:.25s}.skill:hover{transform:translateY(-3px);border-color:rgba(89,225,255,.45);color:var(--cyan)}
+.achievements{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.achievement strong{font:700 3rem "Space Grotesk";display:block;background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;color:transparent}.achievement span{color:var(--muted);font-size:.84rem}
+.contact{display:grid;grid-template-columns:1fr .75fr;gap:20px}.contact-links{display:grid;gap:10px}.contact-link{padding:16px;border:1px solid var(--line);border-radius:13px;color:#cfe0f0;background:rgba(255,255,255,.02);transition:.2s}.contact-link:hover{transform:translateX(6px);border-color:rgba(89,225,255,.4);color:var(--cyan)}
+footer{padding:35px 0;color:var(--muted);font-size:.8rem;border-top:1px solid var(--line)}
+@keyframes rise{to{opacity:1;transform:translateY(0)}from{transform:translateY(24px)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes breathe{50%{transform:scale(1.18);opacity:.72}}@keyframes pulse{70%{box-shadow:0 0 0 8px transparent}}@keyframes float{50%{transform:translateY(-8px)}}
+@media(max-width:850px){.links{display:none}.bio-orbit{opacity:.35;right:-80px}.about,.research-card,.contact{grid-template-columns:1fr}.projects,.achievements{grid-template-columns:1fr 1fr}.exp{grid-template-columns:1fr;gap:4px}}
+@media(max-width:560px){.hero{padding-top:120px}.bio-orbit{display:none}.projects,.achievements,.stats{grid-template-columns:1fr}h1{font-size:3.6rem}section{padding:75px 0}}
+</style>
+</head>
+<body>
+<div id="orb"></div>
+<nav><div class="nav"><a class="logo" href="#home">DR<b>.</b></a><div class="links">
+<a href="#about">About</a><a href="#research">Research</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+
+<header id="home" class="hero"><div class="container hero-content">
+<div class="eyebrow"><span class="pulse"></span> M.Tech Biomedical Sciences & Engineering · IIT Guwahati</div>
+<h1>DUSTHAKAR<br><span class="gradient">RAMOJI RAO</span></h1>
+<p class="hero-copy">Biomedical sciences & engineering researcher exploring biomaterials, hydrogel systems and healthcare innovation — with a growing focus on regulatory affairs and data-driven problem solving.</p>
+<div class="buttons"><a class="btn primary" href="#research">Explore my work ↓</a><a class="btn" href="mailto:YOUR_EMAIL@example.com">Let’s connect ↗</a></div>
+</div><div class="bio-orbit"><div class="core"></div><i class="node n1"></i><i class="node n2"></i><i class="node n3"></i></div></header>
+
+<section id="about"><div class="container reveal"><div class="kicker">01 · About</div><h2>Research-minded. Industry-ready.</h2><div class="about">
+<div class="card"><p>I am an M.Tech student in Biomedical Sciences & Engineering at IIT Guwahati with a B.Pharm background. My work sits at the intersection of biomedical research, biomaterials and healthcare applications.</p><br><p>I enjoy turning experimental questions into structured workflows, learning technical tools and communicating scientific concepts clearly. I am also building skills relevant to regulatory affairs, clinical research, data analysis and technology-driven healthcare roles.</p></div>
+<div class="stats"><div class="stat"><strong>IIT Guwahati</strong><span>M.Tech · Biomedical Sciences & Engineering</span></div><div class="stat"><strong>B.Pharm</strong><span>Pharmacy foundation</span></div><div class="stat"><strong>1M+ views</strong><span>Creative/video editing</span></div><div class="stat"><strong>Research</strong><span>Hydrogels · Biomaterials · Cell systems</span></div></div>
+</div></div></section>
+
+<section id="research"><div class="container reveal"><div class="kicker">02 · Research</div><h2>Mucus-based hydrogels.</h2><p class="lead">Current thesis work focused on developing and characterizing mucus-based hydrogel systems for cervical mucus modelling and biomedical applications.</p>
+<div class="card research-card"><div><h3 style="font:600 1.45rem 'Space Grotesk';margin-bottom:10px">Cervical mucus modelling with mucin-based hydrogels</h3><p>Investigating physicochemical and rheological properties of mucus-mimetic hydrogel systems. Work includes modifying mucin with crosslinking and pH-responsive functionality, followed by optimization and characterization to improve stability and control pore structure.</p><div class="tags"><span class="tag">Mucin Hydrogels</span><span class="tag">Rheology</span><span class="tag">NMR</span><span class="tag">SEM</span><span class="tag">Dialysis</span><span class="tag">Lyophilization</span></div></div>
+<div class="molecule"><svg viewBox="0 0 430 300"><path class="strand" d="M70 50 C190 120 240 180 360 250 M70 250 C190 180 240 120 360 50"/><g><circle class="m-dot" cx="70" cy="50" r="6"/><circle class="m-dot" cx="120" cy="88" r="5"/><circle class="m-dot" cx="170" cy="125" r="6"/><circle class="m-dot" cx="215" cy="150" r="5"/><circle class="m-dot" cx="265" cy="175" r="6"/><circle class="m-dot" cx="310" cy="212" r="5"/><circle class="m-dot" cx="360" cy="250" r="6"/><circle class="m-dot" cx="70" cy="250" r="6"/><circle class="m-dot" cx="120" cy="212" r="5"/><circle class="m-dot" cx="170" cy="175" r="6"/><circle class="m-dot" cx="215" cy="150" r="5"/><circle class="m-dot" cx="265" cy="125" r="6"/><circle class="m-dot" cx="310" cy="88" r="5"/><circle class="m-dot" cx="360" cy="50" r="6"/></g></svg></div></div></div></section>
+
+<section id="projects"><div class="container reveal"><div class="kicker">03 · Selected Projects</div><h2>Building things that solve problems.</h2><div class="projects">
+<article class="card project"><div><small>Biomaterials · Thesis</small><h3>Mucus-Based Hydrogel Research</h3><p>Development and characterization of mucin-based hydrogels for cervical mucus modelling, focusing on stability, rheology and microstructure.</p></div><span class="arrow">↗</span></article>
+<article class="card project"><div><small>Biomedical Device · Prototype</small><h3>Smart Pressure-Relief Pad</h3><p>Prototype for pressure-ulcer prevention using FSR pressure sensing, temperature monitoring and ESP32-based alerts for prolonged high-pressure conditions.</p></div><span class="arrow">↗</span></article>
+<article class="card project"><div><small>Pharmaceutical Analysis</small><h3>Derivative UV Method Validation</h3><p>Method development and validation for estimation of carprofen in pharmaceutical dosage form using derivative UV spectrophotometry.</p></div><span class="arrow">↗</span></article>
+</div></div></section>
+
+<section id="experience"><div class="container reveal"><div class="kicker">04 · Experience</div><h2>Academic & professional experience.</h2><div class="timeline">
+<div class="exp"><div class="date">AUG 2025 — PRESENT</div><div><h3>Teaching Assistant · IIT Guwahati</h3><p>Department of Chemistry. Supported laboratory classes, supervised B.Tech first-year students across 10+ experiments and assisted students with laboratory equipment and safe experimental workflows.</p></div></div>
+<div class="exp"><div class="date">APR 2023 — JUL 2023</div><div><h3>Biology Subject Matter Expert · Chegg</h3><p>Solved and reviewed biology-related academic questions across molecular biology, cell biology and physiology, emphasizing scientific accuracy, clarity and conceptual understanding.</p></div></div>
+</div></div></section>
+
+<section id="skills"><div class="container reveal"><div class="kicker">05 · Skills</div><h2>My toolkit.</h2><p class="lead">A mix of biomedical research, analytical, technical and communication skills.</p><div class="skillwrap">
+<span class="skill">Biomedical Research</span><span class="skill">Biomaterials</span><span class="skill">Hydrogels</span><span class="skill">Stem Cell Research</span><span class="skill">Regulatory Affairs</span><span class="skill">Clinical Research</span><span class="skill">Pharmacovigilance</span><span class="skill">ICH-GCP</span><span class="skill">Python</span><span class="skill">SQL</span><span class="skill">C++</span><span class="skill">HTML</span><span class="skill">NumPy</span><span class="skill">Pandas</span><span class="skill">Matplotlib</span><span class="skill">Data Analysis</span><span class="skill">Canva</span><span class="skill">CapCut</span><span class="skill">Video Editing</span><span class="skill">MS Office</span>
+</div></div></section>
+
+<section id="achievements"><div class="container reveal"><div class="kicker">06 · Highlights</div><h2>Beyond the lab.</h2><div class="achievements">
+<div class="card achievement"><strong data-target="32">0</strong><span>AP PGECET 2024 — State Rank in Pharmacy</span></div><div class="card achievement"><strong data-target="1291">0</strong><span>NIPER examination 2024 — Rank</span></div><div class="card achievement"><strong data-target="1">0</strong><span>Million+ YouTube views through creative video editing</span></div>
+</div></div></section>
+
+<section id="contact"><div class="container reveal"><div class="kicker">07 · Contact</div><h2>Let’s connect.</h2><div class="contact"><div class="card"><p>I’m open to opportunities and conversations around biomedical research, regulatory affairs, healthcare technology and related roles.</p><br><p style="color:var(--cyan)">Replace the placeholder email before publishing.</p></div><div class="contact-links">
+<a class="contact-link" href="https://www.linkedin.com/in/dusthakar-ramoji-rao-a0a26123b" target="_blank">LinkedIn ↗</a><a class="contact-link" href="https://youtube.com/@gajala_editz" target="_blank">YouTube · Gajala Editz ↗</a><a class="contact-link" href="mailto:YOUR_EMAIL@example.com">Email ↗</a></div></div></div></section>
+<footer><div class="container">© 2026 DUSTHAKAR RAMOJI RAO · Biomedical Sciences & Engineering</div></footer>
+
+<script>
+const orb=document.getElementById('orb');
+window.addEventListener('pointermove',e=>{orb.style.left=e.clientX+'px';orb.style.top=e.clientY+'px'});
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const counters=document.querySelectorAll('[data-target]');
+const counterObs=new IntersectionObserver(entries=>entries.forEach(e=>{
+ if(e.isIntersecting&&!e.target.dataset.done){
+   e.target.dataset.done='1';const target=+e.target.dataset.target;let n=0;const step=Math.max(1,Math.ceil(target/45));
+   const tick=()=>{n=Math.min(target,n+step);e.target.textContent=n+(target===1?'M+':'');if(n<target)requestAnimationFrame(tick)};
+   tick();
+ }}),{threshold:.8});
+counters.forEach(c=>counterObs.observe(c));
+
+const sections=[...document.querySelectorAll('section')], navs=[...document.querySelectorAll('.links a')];
+const navObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){navs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-40% 0px -50% 0px'});
+sections.forEach(s=>navObs.observe(s));
+
+document.querySelectorAll('.project').forEach(card=>{
+ card.addEventListener('pointermove',e=>{
+   const r=card.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
+   card.style.transform=`perspective(700px) rotateX(${-(y/r.height-.5)*5}deg) rotateY(${(x/r.width-.5)*6}deg) translateY(-8px)`;
+ });
+ card.addEventListener('pointerleave',()=>card.style.transform='');
+});
+</script>
+</body>
+</html>
